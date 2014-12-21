@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+<script type="text/javascript">
+	function uploadPic(filePath) {
+		/* filePath 图片本地全路径 */
+		document.getElementById("content").innerHTML += "<br\><img src=\"" + filePath + "\"/>";
+	}
+
+	/* 此方法同 onClick="vii.onCapture()" 效果*/
+	function jsOnCapture() {
+		vii.onCapture();
+	}
+	function jsFetchPic() {
+		vii.onFetchPic();
+	}
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value="拍照" onClick="vii.onCapture()" />
+	<p>
+	<p>
+		<input type="button" value="查看相册" onClick="vii.onFetchPic()" />
+	<p>
+	<div id="content">图片显示</div>
+</body>
+</html>
